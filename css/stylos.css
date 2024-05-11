@@ -1,0 +1,155 @@
+
+/* UNIVERSALES */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    scroll-behavior: smooth;
+    font-family: "Abril Fatface", serif
+}
+
+body{
+    background-color: black;
+    color: white;
+}
+
+/* HERO */
+
+.hero{
+    margin-top: 120px;
+}
+
+
+.hero img{
+    opacity: .8;
+    padding: 0px 20px;
+    width: 100%;
+}
+
+p,
+a,
+span{
+    font-family: "Poiret One", sans-serif;
+    color: currentColor;
+    font-size: 19px;
+    font-weight: 500;
+    letter-spacing: 1px;
+}
+
+.slider{
+    padding-top: 120px;
+    width: 100%;
+    overflow: hidden;
+}
+
+.slider ul{
+    width: 500%;
+    display: flex;
+    gap: 10px;
+    animation: slider 70s infinite linear alternate;
+}
+
+@keyframes slider {
+    100%{
+        transform: translateX(-78%);
+    }
+    
+}
+
+.slider ul:hover{
+    animation-play-state: paused;
+}
+
+.slider #card:hover{
+    transform: translateY(-10px);
+}
+
+.slider #card picture{
+    height: 18vw;
+}
+
+#card{
+    width: 32vw;
+    padding: 5px;
+    border: 1px solid rgba(255, 255, 255, 0.32);
+    display: block;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.13);
+    transition: all .3s;
+}
+
+#card picture{
+    position: relative;
+    width: 100%;
+    display: block;
+    overflow: hidden;
+    border-radius: 10px;
+    max-height: 28vw;
+}
+
+#card picture p{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    justify-content: space-between;
+    align-items: end;
+    height: 100%;
+    background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0), rgba(4, 4, 4, 0.214), rgb(0, 0, 0));
+    border-radius: 0px;
+}
+
+#card picture p span{
+    font-style: italic;
+}
+
+#card picture img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 10px;
+    display: block;
+}
+
+#card p{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 20px;
+    border-radius: 8px;
+    gap: 10px;
+    margin-top: 7px;
+    background-color: rgba(255, 255, 255, 0.118);
+}
+
+#card p svg{
+    width: 25px;
+    transition: all .3s;
+}
+
+#card:hover p svg{
+    transform: translateX(10px);
+}
+
+/* SECTION GRID */
+
+.grid{
+    padding: 0px 10px;
+    display: flex;
+    gap: 10px;
+    margin-top: 120px;
+}
+
+.grid ul{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 33%;
+}
+
+.grid ul #card{
+    width: 100%;
+}
